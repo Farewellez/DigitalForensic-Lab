@@ -51,6 +51,6 @@ endobj
 /F1 5 0 R
 /F2 8 0 R
 ```
-yaitu metadata dari author, kalau kita decode maka hasilnya adalah picoCTF{puzzl3d_m3tadata_f0und!_ca76bbb2}
+yaitu metadata dari author, kalau kita decode maka hasilnya adalah picoCTF{puzzl3d_m3tadata_f0und!_ca76bbb2}. Teknik ini termasuk kategori **Steganography technique**
 
 **Flag: picoCTF{puzzl3d_m3tadata_f0und!_ca76bbb2}**
