@@ -1,0 +1,57 @@
+┌──(w4llnut_07㉿kali)-[/tmp/chall]
+└─$ dvest
+==========================================
+  ⬇️ DVEST: Downloader for Vulnerable Executables  
+==========================================
+Masukkan URL berkas yang akan diunduh: https://challenge-files.picoctf.net/c_verbal_sleep/b22e1ca13c0b82bb85afe5ae162f6ecbdf5b651e364e6a2b57c9ad44ae0b3bfd/memdump.mem.gz
+Simpan sebagai (Default: memdump.mem.gz): 
+------------------------------------------
+⬇️ Mulai Mengunduh...
+  URL : https://challenge-files.picoctf.net/c_verbal_sleep/b22e1ca13c0b82bb85afe5ae162f6ecbdf5b651e364e6a2b57c9ad44ae0b3bfd/memdump.mem.gz
+  Ke  : memdump.mem.gz
+------------------------------------------
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 661.5M 100 661.5M   0     0 432127     0   0:26:45  0:26:45 --:--:-- 276704
+✅ Berkas **memdump.mem.gz** berhasil diunduh di direktori saat ini!
+memdump.mem.gz: gzip compressed data, was "memdump.mem", last modified: Mon Mar 10 04:32:30 2025, from Unix, original size modulo 2^32 2147483648
+                                                                                                                                                                                                                                            
+┌──(w4llnut_07㉿kali)-[/tmp/chall]
+└─$ ls
+bitlocker-2.dd  memdump.mem.gz
+                                                                                                                                                                                                                                            
+┌──(w4llnut_07㉿kali)-[/tmp/chall]
+└─$ gunzip memdump.mem.gz                                                                                                
+                                                                                                                                                                                                                                            
+┌──(w4llnut_07㉿kali)-[/tmp/chall]
+└─$ ls
+bitlocker-2.dd  memdump.mem
+                                                                                                                                                                                                                                            
+┌──(w4llnut_07㉿kali)-[/tmp/chall]
+└─$ file bitlocker-2.dd   
+bitlocker-2.dd: DOS/MBR boot sector, code offset 0x58+2, OEM-ID "-FVE-FS-", sectors/cluster 8, reserved sectors 0, Media descriptor 0xf8, sectors/track 63, heads 255, hidden sectors 41531392, FAT (32 bit), sectors/FAT 8160, serial number 0, unlabeled; NTFS, sectors/track 63, physical drive 0x1fe0, $MFT start cluster 393217, serial number 02020454d414e204f, checksum 0x41462020
+                                                                                                                                                                                                                                            
+┌──(w4llnut_07㉿kali)-[/tmp/chall]
+└─$ ls -lh bitlocker-2.dd 
+-rw-r--r-- 1 w4llnut_07 kali 128M Feb 20 05:44 bitlocker-2.dd
+                                                                                                                                                                                                                                            
+┌──(w4llnut_07㉿kali)-[/tmp/chall]
+└─$ ls -lh memdump.mem   
+-rw-r--r-- 1 w4llnut_07 kali 2.0G Feb 20 06:13 memdump.mem
+                                                                                                                                                                                                                                            
+┌──(w4llnut_07㉿kali)-[/tmp/chall]
+└─$ file memdump.mem                          
+memdump.mem: Windows Event Trace Log
+
+
+ini aku lagi ngerjain chall foren deskripsinya kaya gini
+Bitlocker-2
+Author: Venax
+
+This problem cannot be solved in the webshell.
+
+Description
+Jacky has learnt about the importance of strong passwords and made sure to encrypt the BitLocker drive with a very long and complex password. We managed to capture the RAM while this drive was opened however. See if you can break through the encryption!
+Download the disk image here and the RAM dump here
+
+tapi kesampingkan itu dulu,coba cek gambar yang kukirim. aku rasa ini seperti bitlocker atau ransom karena drive ku ke encrypt semua, saat ini aku sedang apt-upgrade juga dan baru selesai
